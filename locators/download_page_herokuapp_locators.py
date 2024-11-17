@@ -1,2 +1,2 @@
 class DownloadPageLocators:
-    DOWNLOAD_loc = ("xpath", "//a[15]")
+    DOWNLOAD_loc = ("xpath", "//a[11]")
