@@ -19,9 +19,8 @@ def driver():
     }
     options.add_argument("--incognito")
     options.add_argument("--window-size=1920x1080")
+    options.add_experimental_option("prefs", prefs)
     driver = webdriver.Chrome(service=service, options=options)
-
 
     yield driver
     driver.quit()
-
