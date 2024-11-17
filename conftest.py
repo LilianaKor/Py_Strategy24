@@ -2,10 +2,12 @@ import pytest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
+from functions import get_root_path
 
 service = Service(ChromeDriverManager().install())
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(service=service, options=options)
+download_path = get_root_path()
 
 
 @pytest.fixture
