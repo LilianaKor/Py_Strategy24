@@ -1,6 +1,7 @@
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class BasePage:
     def __init__(self, driver, url):
         self.driver = driver
@@ -17,5 +18,3 @@ class BasePage:
 
     def element_is_present(self, locator, timeout=5):
         return wait(self.driver, timeout=timeout).until(EC.presence_of_element_located(locator))
-
-
