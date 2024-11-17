@@ -12,6 +12,9 @@ driver = webdriver.Chrome(service=service, options=options)
 def driver():
     service = Service(executable_path=ChromeDriverManager().install())
     options = webdriver.ChromeOptions()
+    prefs = {
+        "download.default_directory": r"C:\Users\user\Downloads",
+    }
     options.add_argument("--incognito")
     options.add_argument("--window-size=1920x1080")
     driver = webdriver.Chrome(service=service, options=options)
