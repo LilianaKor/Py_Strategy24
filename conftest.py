@@ -7,7 +7,7 @@ from functions import get_root_path
 service = Service(ChromeDriverManager().install())
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(service=service, options=options)
-download_path = get_root_path()
+download_path = get_root_path("data/download")
 
 
 @pytest.fixture
