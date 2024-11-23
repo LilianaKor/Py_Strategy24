@@ -1,5 +1,4 @@
 import time
-
 from data.urls import Urls
 from functions import get_root_path
 from pages.upload_page import UploadPage
@@ -13,4 +12,7 @@ class TestUpload:
         page = UploadPage(driver, f"{self.url.herokuapp_base_url}upload")
         page.open()
         page.upload_file(file_path)
-        time.sleep(5)
+        h3_text, file_name = page.check_upload_file()
+        print(h3_text)
+        print(file_name)
+
