@@ -26,3 +26,5 @@ class TestButtonsPage:
         text = page.click_btn()
         assert text == "You have done a dynamic click"
 
+    
+

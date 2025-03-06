@@ -9,6 +9,7 @@ from functions import get_root_path
 
 download_path = get_root_path("data\download")
 
+
 @pytest.fixture
 def driver():
     service = Service(executable_path=ChromeDriverManager().install())
