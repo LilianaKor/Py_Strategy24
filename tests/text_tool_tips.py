@@ -30,3 +30,5 @@ class TestToopTips:
         property_value_after = page.get_css_property("background-color")
         assert property_value_before != property_value_after
         assert property_value_after == "rgba(33, 136, 56, 1)"
+
+
